@@ -1,0 +1,47 @@
+.info 
+{
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+#TownSquare
+{
+    float: right;
+}
+
+.townSquareInfo
+{
+    text-align: right;
+}
+
+.info::after
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.unorderedList::after
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.unorderedListTitle
+{
+    font-family: Calibri;
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3px;
+    padding-bottom: 6px;
+}
+
+.unorderedListItems
+{
+    font-family: Calibri;
+    line-height: 25px;
+    font-size: 20px;
+    padding-bottom: 16px;
+}
