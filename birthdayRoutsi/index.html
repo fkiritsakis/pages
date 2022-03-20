@@ -3,5 +3,62 @@
     <head>
         <title>Hello BB grill</title>
         <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
+    <body onload="updateCountdown()">
+
+        <script src="script.js"></script>
+
+        <div class="card">
+            <div class="text">
+                <h1>This little lovely baby girl has her birthday in:</h1>
+                <div class="time">
+
+                    <div class="square">
+                        <div class="day">
+                            <h2 id="dayCounter">Day</h2>
+                        </div>    
+                    </div>
+
+                    <div class="square">
+                        <h2>:</h2>
+                    </div>
+
+                    <div class="square">
+                        <div class="hour">
+                            <h2 id="hourCounter">Hour</h2>
+                        </div>
+                    </div>
+
+                    <div class="square">
+                        <h2>:</h2>
+                    </div>
+
+                    <div class="square">
+                        <div class="minute">
+                            <h2 id="minuteCounter">Minute</h2>
+                        </div>
+                    </div>
+
+                    <div class="square">
+                        <h2>:</h2>
+                    </div>
+
+                    <div class="square">
+                        <div class="minute">
+                            <h2 id="secondCounter">Secons</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

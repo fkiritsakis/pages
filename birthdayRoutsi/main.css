@@ -1,0 +1,77 @@
+html
+{
+    padding: 16px;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+body
+{
+    background: linear-gradient(90deg, lightpink, white, pink);
+}
+
+h1
+{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 35px;
+}
+
+h2
+{
+    width: fit-content;
+    padding: 12px;
+}
+
+.card
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 16px;
+    background-color: lightcoral;
+}
+
+.text
+{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.time
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    width: fit-content;
+}
+
+.square
+{
+    font-size: 30px;
+    float: left;
+}
+
+.day
+{
+    width: fit-content;
+    color: blueviolet;
+}
+
+.hour
+{
+    width: fit-content;
+    color: crimson;
+}
+
+.minute
+{
+    width: fit-content;
+    color: chocolate;
+}
+
+
+
