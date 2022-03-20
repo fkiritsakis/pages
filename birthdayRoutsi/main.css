@@ -8,6 +8,32 @@ html
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+    h1
+    {
+        font-size: 25px;
+    }
+
+    div.square
+    {
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 601px) {
+    h1
+    {
+        font-size: 35px;
+    }
+
+    div.square
+    {
+        font-size: 30px;
+    }
+    
+}
+
 body
 {
     background: linear-gradient(90deg, lightpink, white, pink);
