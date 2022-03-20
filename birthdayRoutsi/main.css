@@ -3,6 +3,9 @@ html
     padding: 16px;
     min-width: 500px;
     min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body
@@ -24,10 +27,7 @@ h2
 
 .card
 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
     border-radius: 20px;
     padding: 16px;
     background-color: lightcoral;
