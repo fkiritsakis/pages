@@ -3,9 +3,7 @@ html
     padding: 16px;
     min-width: 500px;
     min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 @media screen and (max-width: 600px) {
@@ -37,6 +35,12 @@ html
 body
 {
     background: linear-gradient(90deg, lightpink, white, pink);
+
+    height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1
@@ -57,6 +61,12 @@ h2
     border-radius: 20px;
     padding: 16px;
     background-color: lightcoral;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .text
