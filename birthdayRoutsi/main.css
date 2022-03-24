@@ -17,6 +17,11 @@ html
         font-size: 20px;
     }
     
+    div.squareOverhead
+    {
+        font-size: 15px;
+    }
+    
 }
 
 @media screen and (min-width: 601px) {
@@ -30,11 +35,15 @@ html
         font-size: 30px;
     }
     
+    div.squareOverhead
+    {    
+        font-size: 20px;
+    }
 }
 
 body
 {
-    background: linear-gradient(90deg, lightpink, white, pink);
+    background: #86235d;
 
     height: 90vh;
     
@@ -47,6 +56,8 @@ h1
 {
     font-family: 'Work Sans', sans-serif;
     font-size: 35px;
+
+    padding-top: 16px;
 }
 
 h2
@@ -100,14 +111,30 @@ h2
 .hour
 {
     width: fit-content;
-    color: crimson;
+    color: lightskyblue;
 }
 
 .minute
 {
     width: fit-content;
-    color: chocolate;
+    color: lightcoral;
 }
 
+.second
+{
+    width: fit-content;
+    color: lightsteelblue;
+}
 
+.timeOverhead
+{
+    font-family: cursive;
+    font-size: 20px;
+
+    display: flex;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    margin-top: 70px;
+}
 
