@@ -133,6 +133,9 @@ a.active, a:hover
     /*Image Used*/
     background-image: url(images/Handshake.jpg);
 
+    /*Check if this works correctly*/
+    width: 100%;
+
     /*Setting a specific height*/
     min-height: 500px;
 
@@ -151,6 +154,7 @@ a.active, a:hover
 .content
 {
     border-radius: 20px;
+    min-width: fit-content;
     max-width: 50%;
     padding: 16px;
     background-color: rgb(224, 255, 255, 0.5);
