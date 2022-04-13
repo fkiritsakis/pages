@@ -127,3 +127,57 @@ a.active, a:hover
         left: 0%;
     }
 }
+
+.parallax
+{
+    /*Image Used*/
+    background-image: url(images/Handshake.jpg);
+
+    /*Setting a specific height*/
+    min-height: 500px;
+
+    /*Creating the parallax scrolling effect*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*Centering all the content to the middle of the div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroText
+{
+    float: right;
+}
+
+.primaryButton
+{
+    border: 1px solid white;
+    margin: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: "Luna";
+    font-size: large;
+    border-radius: 25px;
+    background-color: #0082e6;
+    color: white;
+}
+
+.primaryButton:hover
+{
+    background-color: rgb(212, 90, 41);
+    color: lightgoldenrodyellow;
+    transition: 0.2s;
+}
