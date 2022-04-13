@@ -150,6 +150,10 @@ a.active, a:hover
 
 .content
 {
+    border-radius: 20px;
+    max-width: 50%;
+    padding: 16px;
+    background-color: rgb(224, 255, 255, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,6 +162,39 @@ a.active, a:hover
 .heroText
 {
     float: right;
+}
+
+.heroText h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heroText h2
+{
+    padding-left: 25px;
+    padding-bottom: 16px;
+    max-width: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: rgb(68, 67, 67);
+}
+
+.line
+{
+    width: 90%;
+    max-height: 1px;
+    border: 1px solid lightseagreen;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .primaryButton
@@ -180,4 +217,35 @@ a.active, a:hover
     background-color: rgb(212, 90, 41);
     color: lightgoldenrodyellow;
     transition: 0.2s;
+}
+
+.secondaryButton
+{
+    border: 1px solid rgba(125, 210, 224, 0.5);
+    margin: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: "Luna";
+    font-size: large;
+    border-radius: 25px;
+    background-color: rgba(125, 210, 224, 0.5);
+    color: #2c3e50;
+}
+
+.secondaryButton:hover
+{
+    background-color: rgb(212, 90, 41);
+    color: lightgoldenrodyellow;
+    transition: 0.2s;
+}
+
+.section
+{
+    background-color: lightblue;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
