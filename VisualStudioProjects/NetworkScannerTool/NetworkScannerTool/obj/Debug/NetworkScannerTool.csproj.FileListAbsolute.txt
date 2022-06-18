@@ -1,0 +1,10 @@
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\bin\Debug\NetworkScannerTool.exe.config
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\bin\Debug\NetworkScannerTool.exe
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\bin\Debug\NetworkScannerTool.pdb
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.csproj.AssemblyReference.cache
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.Form1.resources
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.Properties.Resources.resources
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.csproj.GenerateResource.cache
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.csproj.CoreCompileInputs.cache
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.exe
+C:\Users\fotis\source\repos\NetworkScannerTool\NetworkScannerTool\obj\Debug\NetworkScannerTool.pdb

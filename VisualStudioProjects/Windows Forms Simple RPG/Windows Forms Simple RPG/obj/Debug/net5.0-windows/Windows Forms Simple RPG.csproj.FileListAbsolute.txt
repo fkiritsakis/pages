@@ -1,0 +1,18 @@
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\Windows Forms Simple RPG.exe
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\Windows Forms Simple RPG.deps.json
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\Windows Forms Simple RPG.runtimeconfig.json
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\Windows Forms Simple RPG.runtimeconfig.dev.json
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\Windows Forms Simple RPG.dll
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\ref\Windows Forms Simple RPG.dll
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\bin\Debug\net5.0-windows\Windows Forms Simple RPG.pdb
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.csproj.AssemblyReference.cache
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows_Forms_Simple_RPG.Form1.resources
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.csproj.GenerateResource.cache
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.AssemblyInfoInputs.cache
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.AssemblyInfo.cs
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.csproj.CoreCompileInputs.cache
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.dll
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\ref\Windows Forms Simple RPG.dll
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.pdb
+C:\Users\fotis\source\repos\Windows Forms Simple RPG\Windows Forms Simple RPG\obj\Debug\net5.0-windows\Windows Forms Simple RPG.genruntimeconfig.cache

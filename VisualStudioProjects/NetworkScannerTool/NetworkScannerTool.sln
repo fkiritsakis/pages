@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkScannerTool", "NetworkScannerTool\NetworkScannerTool.csproj", "{BF397491-224B-4414-B727-BC52EDAACB9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF397491-224B-4414-B727-BC52EDAACB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF397491-224B-4414-B727-BC52EDAACB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF397491-224B-4414-B727-BC52EDAACB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF397491-224B-4414-B727-BC52EDAACB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FEC2C3B-7EBF-4B2B-B120-2FF6C053E62F}
+	EndGlobalSection
+EndGlobal
