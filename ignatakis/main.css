@@ -1,0 +1,255 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;   
+}
+
+body
+{
+    font-family: montserrat;
+}
+
+nav
+{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo
+{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul
+{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a
+{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 5px;
+}
+
+a.active, a:hover
+{
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn
+{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check
+{
+    display: none;
+}
+
+@media (max-width: 952px)
+{
+    label.logo
+    {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px)
+{
+    .checkbtn
+    {
+        display: block;
+    }
+
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li
+    {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a
+    {
+        font-size: 20px;
+    }
+
+    a:hover,a.active
+    {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ul
+    {
+        left: 0%;
+    }
+}
+
+.parallax
+{
+    /*Image Used*/
+    background-image: url(images/Handshake.jpg);
+
+    /*Check if this works correctly*/
+    width: 100%;
+
+    /*Setting a specific height*/
+    min-height: 500px;
+
+    /*Creating the parallax scrolling effect*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*Centering all the content to the middle of the div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content
+{
+    border-radius: 20px;
+    min-width: fit-content;
+    max-width: 50%;
+    padding: 16px;
+    background-color: rgb(224, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroText
+{
+    float: right;
+}
+
+.heroText h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heroText h2
+{
+    padding-left: 25px;
+    padding-bottom: 16px;
+    max-width: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: rgb(68, 67, 67);
+}
+
+.line
+{
+    width: 90%;
+    max-height: 1px;
+    border: 1px solid lightseagreen;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.primaryButton
+{
+    border: 1px solid white;
+    margin: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: "Luna";
+    font-size: large;
+    border-radius: 25px;
+    background-color: #0082e6;
+    color: white;
+}
+
+.primaryButton:hover
+{
+    background-color: rgb(212, 90, 41);
+    color: lightgoldenrodyellow;
+    transition: 0.2s;
+}
+
+.secondaryButton
+{
+    border: 1px solid rgba(125, 210, 224, 0.5);
+    margin: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: "Luna";
+    font-size: large;
+    border-radius: 25px;
+    background-color: rgba(125, 210, 224, 0.5);
+    color: #2c3e50;
+}
+
+.secondaryButton:hover
+{
+    background-color: rgb(212, 90, 41);
+    color: lightgoldenrodyellow;
+    transition: 0.2s;
+}
+
+.section
+{
+    background-color: lightblue;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
