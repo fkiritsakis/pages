@@ -65,6 +65,16 @@ namespace BankingSystem
 
         #endregion
 
+        #region Bottom Buttons
+        //Check if the username exists in the database
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        #endregion
+
 
     }
 }
