@@ -1,0 +1,13 @@
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\bin\Debug\NetworkConnectionTester.exe.config
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\bin\Debug\NetworkConnectionTester.exe
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\bin\Debug\NetworkConnectionTester.pdb
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.csproj.SuggestedBindingRedirects.cache
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.Form1.resources
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.Properties.Resources.resources
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.csproj.GenerateResource.cache
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.csproj.CoreCompileInputs.cache
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.exe
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.pdb
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.NetworkSingleAddressTest.resources
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.csproj.AssemblyReference.cache
+C:\Users\Service-2\source\repos\NetworkConnectionTester\NetworkConnectionTester\obj\Debug\NetworkConnectionTester.NetworkMultipleAdressesTest.resources

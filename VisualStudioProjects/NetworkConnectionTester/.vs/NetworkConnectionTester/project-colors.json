@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "30738936-3828-4eec-9284-c7767e94ea2c": {
+      "ProjectGuid": "30738936-3828-4eec-9284-c7767e94ea2c",
+      "DisplayName": "NetworkConnectionTester",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
