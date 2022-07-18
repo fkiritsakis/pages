@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace BankingSystem
 {
@@ -16,6 +18,10 @@ namespace BankingSystem
         //Window Dragging variables
         bool bMouseDown;
         Point pOffset;
+
+        //Database Variables
+        SqlConnection sqlCon;
+        SqlCommand sqlCmd;
 
         public frmLogin()
         {
