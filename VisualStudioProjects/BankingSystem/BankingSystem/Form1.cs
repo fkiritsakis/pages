@@ -97,6 +97,9 @@ namespace BankingSystem
                 {
                     sqlDReader.Close();
                     MessageBox.Show("Successful Login");
+                    frmDashboard dashboard = new frmDashboard();
+                    dashboard.Show();
+                    this.Hide();
                 }
                 else 
                 {
