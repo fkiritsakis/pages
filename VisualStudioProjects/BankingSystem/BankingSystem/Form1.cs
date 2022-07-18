@@ -22,6 +22,8 @@ namespace BankingSystem
         //Database Variables
         SqlConnection sqlCon;
         SqlCommand sqlCmd;
+        SqlDataReader sqlDReader;
+
         //Creating a public constant for the connection string
         public const string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\BankDB.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -35,6 +37,8 @@ namespace BankingSystem
         {
             //Loading the Connection String
             sqlCon = new SqlConnection(CONNECTION_STRING);
+            sqlCon.Open();
+            MessageBox.Show("Connection to Bank Database Successful and Open!");
         }
 
         #region Top Bar Controls
@@ -83,7 +87,25 @@ namespace BankingSystem
         //Check if the username exists in the database
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            //Check if the two textboxes are not empty
+            if(txtUsername.Text != String.Empty && txtPassword.Text != String.Empty) 
+            {
+                sqlCmd = new SqlCommand("SELECT * FROM Accounts WHERE Username='" +txtUsername.Text+"' AND Password='"+txtPassword.Text+"'", sqlCon);
+                sqlDReader = sqlCmd.ExecuteReader();
+                //If the reader reads somthing with these data the code will execute
+                if (sqlDReader.Read()) 
+                {
+                    sqlDReader.Close();
+                    MessageBox.Show("Successful Login");
+                }
+                else 
+                {
+                    sqlDReader.Close();
+                    lblWrongData.Visible = true;
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                }
+            }
         }
 
 

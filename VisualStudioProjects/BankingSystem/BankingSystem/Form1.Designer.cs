@@ -41,7 +41,7 @@ namespace BankingSystem
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblWrongData = new System.Windows.Forms.Label();
             this.pnlTopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -180,23 +180,23 @@ namespace BankingSystem
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // lblWrongData
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(166, 277);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Wrong Username or Password!";
-            this.label4.Visible = false;
+            this.lblWrongData.AutoSize = true;
+            this.lblWrongData.ForeColor = System.Drawing.Color.Red;
+            this.lblWrongData.Location = new System.Drawing.Point(166, 277);
+            this.lblWrongData.Name = "lblWrongData";
+            this.lblWrongData.Size = new System.Drawing.Size(166, 13);
+            this.lblWrongData.TabIndex = 10;
+            this.lblWrongData.Text = "Wrong Username or Password!";
+            this.lblWrongData.Visible = false;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 450);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblWrongData);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCreateAccount);
             this.Controls.Add(this.btnLogin);
@@ -233,7 +233,7 @@ namespace BankingSystem
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblWrongData;
     }
 }
 

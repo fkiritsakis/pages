@@ -23,3 +23,16 @@ C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSyste
 C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.CoreCompileInputs.cache
 C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.exe
 C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.pdb
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\bin\Debug\BankDB.mdf
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\bin\Debug\BankDB_log.ldf
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\bin\Debug\BankingSystem.exe.config
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\bin\Debug\BankingSystem.exe
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\bin\Debug\BankingSystem.pdb
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.AssemblyReference.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmLogin.resources
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.Properties.Resources.resources
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.GenerateResource.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.CoreCompileInputs.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.exe
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.pdb
