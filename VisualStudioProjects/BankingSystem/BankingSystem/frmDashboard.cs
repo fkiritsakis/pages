@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace BankingSystem
 {
@@ -16,9 +18,28 @@ namespace BankingSystem
         bool bMouseDown;
         Point pOffset;
 
+        //Sql Variables
+        SqlConnection sqlCon;
+        SqlCommand sqlCommand;
+        SqlDataReader sqlDataReader;
+        SqlDataAdapter sqlDataAdapter;
+
+
         public frmDashboard()
         {
             InitializeComponent();
+
+            //TBD Add the panels for each action the user can take and make 
+            //them visible according to their clearend
+            //Admin should have everything visible Create employee+client Account, Deposit, Withdraw, View/Print, Change Employee+Client Data
+            //Employee should have most visible Deposit, Withdraw, View/Print, Change Client Data
+            //Client should only have Deposit, Withdraw and View/Print available
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            sqlCon = new SqlConnection(frmLogin.CONNECTION_STRING);
+            sqlCon.Open();
         }
 
 
@@ -36,7 +57,7 @@ namespace BankingSystem
             this.WindowState = FormWindowState.Minimized;
         }
 
-        #endregion
+        
 
         //Gets the possition of the mouse the second that the mouse button is clicked
         private void pnlTopBar_MouseDown_Event(object sender, MouseEventArgs e)
@@ -62,5 +83,12 @@ namespace BankingSystem
         {
             bMouseDown = false;
         }
+
+        #endregion
+
+        #region General Controls
+
+        #endregion
+
     }
 }

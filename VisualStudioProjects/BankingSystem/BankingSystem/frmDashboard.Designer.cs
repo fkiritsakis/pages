@@ -104,6 +104,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDashboard";
             this.Text = "frmDashboard";
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlTopPanel.PerformLayout();
             this.ResumeLayout(false);
