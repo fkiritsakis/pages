@@ -67,7 +67,7 @@ namespace BankingSystem
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Banking System";
             // 
@@ -109,7 +109,7 @@ namespace BankingSystem
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(69, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username:";
             // 
@@ -119,7 +119,7 @@ namespace BankingSystem
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(72, 236);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 23);
+            this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password:";
             // 
@@ -127,7 +127,7 @@ namespace BankingSystem
             // 
             this.txtUsername.Location = new System.Drawing.Point(179, 197);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(137, 26);
+            this.txtUsername.Size = new System.Drawing.Size(137, 22);
             this.txtUsername.TabIndex = 5;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -136,7 +136,7 @@ namespace BankingSystem
             this.txtPassword.Location = new System.Drawing.Point(179, 231);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(137, 26);
+            this.txtPassword.Size = new System.Drawing.Size(137, 22);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -186,14 +186,14 @@ namespace BankingSystem
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(166, 277);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 19);
+            this.label4.Size = new System.Drawing.Size(166, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Wrong Username or Password!";
             this.label4.Visible = false;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 450);
             this.Controls.Add(this.label4);
@@ -211,6 +211,7 @@ namespace BankingSystem
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banking System";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlTopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

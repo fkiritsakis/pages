@@ -28,6 +28,11 @@ namespace BankingSystem
             InitializeComponent();
         }
 
+        //Method to run Upon frmLogin loading
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
 
         #region Top Bar Controls
 
@@ -79,8 +84,9 @@ namespace BankingSystem
         }
 
 
+
         #endregion
 
-
+        
     }
 }
