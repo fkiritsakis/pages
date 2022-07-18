@@ -22,6 +22,8 @@ namespace BankingSystem
         //Database Variables
         SqlConnection sqlCon;
         SqlCommand sqlCmd;
+        //Creating a public constant for the connection string
+        public const string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\BankDB.mdf;Integrated Security=True;Connect Timeout=30";
 
         public frmLogin()
         {
@@ -31,7 +33,8 @@ namespace BankingSystem
         //Method to run Upon frmLogin loading
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            //Loading the Connection String
+            sqlCon = new SqlConnection(CONNECTION_STRING);
         }
 
         #region Top Bar Controls
