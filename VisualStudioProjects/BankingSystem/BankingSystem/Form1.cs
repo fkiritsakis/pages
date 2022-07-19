@@ -25,8 +25,7 @@ namespace BankingSystem
         SqlDataReader sqlDReader;
 
         //Creating a public constant for the connection string
-        public const string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\BankDB.mdf;Integrated Security=True;Connect Timeout=30";
-
+        public const string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\BankDB.mdf;Integrated Security=True;Connect Timeout=30";
         public frmLogin()
         {
             InitializeComponent();
@@ -87,13 +86,18 @@ namespace BankingSystem
         //Check if the username exists in the database
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+
+        private void Login() 
+        {
             //Check if the two textboxes are not empty
-            if(txtUsername.Text != String.Empty && txtPassword.Text != String.Empty) 
+            if (txtUsername.Text != String.Empty && txtPassword.Text != String.Empty)
             {
-                sqlCmd = new SqlCommand("SELECT * FROM Accounts WHERE Username='" +txtUsername.Text+"' AND Password='"+txtPassword.Text+"'", sqlCon);
+                sqlCmd = new SqlCommand("SELECT * FROM Accounts WHERE Username='" + txtUsername.Text + "' AND Password='" + txtPassword.Text + "'", sqlCon);
                 sqlDReader = sqlCmd.ExecuteReader();
                 //If the reader reads somthing with these data the code will execute
-                if (sqlDReader.Read()) 
+                if (sqlDReader.Read())
                 {
                     sqlDReader.Close();
                     MessageBox.Show("Successful Login");
@@ -101,7 +105,7 @@ namespace BankingSystem
                     dashboard.Show();
                     this.Hide();
                 }
-                else 
+                else
                 {
                     sqlDReader.Close();
                     lblWrongData.Visible = true;
@@ -113,8 +117,30 @@ namespace BankingSystem
 
 
 
+
         #endregion
 
-        
+        //OnKeyDown to detect key events that might be usefull for later
+        //Both not working as intended as of now
+        //TBD Fix so that the close button is not focused on open so that pressing enter closes the program
+        //TBD txtPassword_OnKeyDown troubleshoot so that it works as intended
+
+        private void frmLogin_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            //Run the Login method when the Enter key is pressed
+            if (ModifierKeys == Keys.Enter) 
+            {
+                Login();
+            }
+        }
+
+        private void txtPassword_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            //Run the login method when the Enter key is pressed
+            if(ModifierKeys == Keys.Enter)
+            {
+                Login();
+            }
+        }
     }
 }

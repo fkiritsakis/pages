@@ -90,5 +90,17 @@ namespace BankingSystem
 
         #endregion
 
+        private void pnlDeposit_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        #region Mouse Hover
+        private void pnlDeposit_MouseHover(object sender, EventArgs e)
+        {
+            //TBD Add Tooltips for all options when mouse hover
+        }
+
+        #endregion
     }
 }
