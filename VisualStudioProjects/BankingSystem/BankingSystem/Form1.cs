@@ -101,7 +101,7 @@ namespace BankingSystem
                 {
                     sqlDReader.Close();
                     MessageBox.Show("Successful Login");
-                    frmDashboard dashboard = new frmDashboard();
+                    frmDashboard dashboard = new frmDashboard(txtUsername.Text);
                     dashboard.Show();
                     this.Hide();
                 }
@@ -115,7 +115,11 @@ namespace BankingSystem
             }
         }
 
-
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            frmAccountCreation frmAccountCreation = new frmAccountCreation();
+            frmAccountCreation.Show();
+        }
 
 
         #endregion
@@ -142,5 +146,7 @@ namespace BankingSystem
                 Login();
             }
         }
+
+        
     }
 }

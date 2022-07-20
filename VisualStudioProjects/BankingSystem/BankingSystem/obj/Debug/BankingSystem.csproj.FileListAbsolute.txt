@@ -38,3 +38,4 @@ C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\Ban
 C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.pdb
 C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmDashboard.resources
 C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmDashboard.resources
+C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmAccountCreation.resources

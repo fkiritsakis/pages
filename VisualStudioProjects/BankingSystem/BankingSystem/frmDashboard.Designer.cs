@@ -116,6 +116,7 @@
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // btnWithdraw
             // 
@@ -132,6 +133,7 @@
             this.btnWithdraw.Text = "Withdraw";
             this.btnWithdraw.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnWithdraw.UseVisualStyleBackColor = true;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
             // btnCheckBalance
             // 
@@ -164,6 +166,7 @@
             this.btnCreateClientAccount.Text = "Create Client Account";
             this.btnCreateClientAccount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCreateClientAccount.UseVisualStyleBackColor = true;
+            this.btnCreateClientAccount.Click += new System.EventHandler(this.btnCreateClientAccount_Click);
             // 
             // btnAccountDetails
             // 
@@ -180,6 +183,7 @@
             this.btnAccountDetails.Text = "Your Account Details";
             this.btnAccountDetails.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAccountDetails.UseVisualStyleBackColor = true;
+            this.btnAccountDetails.Click += new System.EventHandler(this.btnAccountDetails_Click);
             // 
             // btnViewClientAccount
             // 
@@ -196,6 +200,7 @@
             this.btnViewClientAccount.Text = "View Client Account";
             this.btnViewClientAccount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnViewClientAccount.UseVisualStyleBackColor = true;
+            this.btnViewClientAccount.Click += new System.EventHandler(this.btnViewClientAccount_Click);
             // 
             // btnCreateEmployeeAccount
             // 
@@ -247,6 +252,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.pnlTopPanel.ResumeLayout(false);
