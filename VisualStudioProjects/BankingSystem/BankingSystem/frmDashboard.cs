@@ -25,7 +25,7 @@ namespace BankingSystem
         string sUsername;
         string sFirstName;
         string sLastName;
-        float fBalance;
+        decimal dBalance;
         string sRole;
 
 
@@ -58,7 +58,7 @@ namespace BankingSystem
             {
                 sFirstName = sqlDataReader.GetString(0);
                 sLastName = sqlDataReader.GetString(1);
-                fBalance = sqlDataReader.GetFloat(2);
+                dBalance = sqlDataReader.GetDecimal(2);
             }
             sqlDataReader.Close();
 
@@ -158,21 +158,21 @@ namespace BankingSystem
         private void btnDeposit_Click(object sender, EventArgs e)
         {
             //Create and show frmDeposit
-            frmDeposit frmDeposit = new frmDeposit(sUsername, fBalance);
+            frmDeposit frmDeposit = new frmDeposit(sUsername, dBalance);
             frmDeposit.Show();
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
             //Create And Show frmWithdraw
-            frmWithdraw frmWithdraw = new frmWithdraw(sUsername, fBalance);
+            frmWithdraw frmWithdraw = new frmWithdraw(sUsername, dBalance);
             frmWithdraw.Show();
         }
 
         private void btnCheckBalance_Click(object sender, EventArgs e)
         {
             //Show a message box displaying the ballance of the current user
-            MessageBox.Show("Your balance is: £" + fBalance);
+            MessageBox.Show("Your balance is: £" + dBalance);
 
             //Create a form that displayes the ballance and add a button that shows
             //the transactions made by this account
@@ -182,7 +182,7 @@ namespace BankingSystem
         private void btnAccountDetails_Click(object sender, EventArgs e)
         {
             //Show A messagebox with the details of the account that is currently logged in
-            MessageBox.Show("Your Account Details. \n First Name: " + sFirstName + "\n Last Name: " + sLastName + " \n Role: " + sRole + " \n Ballance: £" + fBalance);
+            MessageBox.Show("Your Account Details. \n First Name: " + sFirstName + "\n Last Name: " + sLastName + " \n Role: " + sRole + " \n Ballance: £" + dBalance);
         }
 
         private void btnCreateClientAccount_Click(object sender, EventArgs e)
@@ -191,6 +191,9 @@ namespace BankingSystem
             //This might seem wrong but the "Create Account" in the starting form should be removed
             //in later versions, so that only employees and the administrator can create accounts for clients and employees (Admin-only)
             frmAccountCreation frmAccountCreation = new frmAccountCreation();
+            
+            //Show the created form
+            frmAccountCreation.Show();
         }
 
         private void btnViewClientAccount_Click(object sender, EventArgs e)

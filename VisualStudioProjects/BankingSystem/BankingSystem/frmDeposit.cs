@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Globalization;
 
 namespace BankingSystem
 {
@@ -28,14 +29,16 @@ namespace BankingSystem
 
         //Local Variable
         string sUsername;
-        float fBalance;
+        decimal dBalance;
 
-        public frmDeposit(string sUser, float fBal)
+        public frmDeposit(string sUser, decimal dBal)
         {
             InitializeComponent();
 
             sUsername = sUser;
-            fBalance = fBal;
+            dBalance = dBal;
+
+            lblBalance.Text = "£ " + dBalance.ToString();
         }
 
         private void frmDeposit_OnLoad(object sender, EventArgs e)
@@ -81,6 +84,28 @@ namespace BankingSystem
             bMouseDown = false;
         }
 
+        //Dublicate code but for some reason both are mandatory to compile the program
+        private void pnlTopbar_MouseDown(object sender, MouseEventArgs e)
+        {
+            pOffset.X = e.X;
+            pOffset.Y = e.Y;
+            bMouseDown = true;
+        }
+
+        private void pnlTopbar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (bMouseDown == true)
+            {
+                Point pCurrentScreenPos = PointToScreen(e.Location);
+                Location = new Point(pCurrentScreenPos.X - pOffset.X, pCurrentScreenPos.Y - pOffset.Y);
+            }
+        }
+
+        private void pnlTopbar_MouseUp(object sender, MouseEventArgs e)
+        {
+            bMouseDown = false;
+        }
+
 
 
         #endregion
@@ -88,24 +113,22 @@ namespace BankingSystem
         private void btnDeposit_Click(object sender, EventArgs e)
         {
             //If Text box is not empty
-            if(txtDepositAmount.Text != String.Empty) 
+            if(numDepositAmount.Value != 0) 
             {
-                //Try to see if the entered text can be converted to a float
-                try 
+                
+
+                decimal dAmount = numDepositAmount.Value;
+
+                if(dAmount > 0) 
                 {
-                    if (float.Parse(txtDepositAmount.Text) > 0) 
-                    {
-                        float fAmount = float.Parse(txtDepositAmount.Text);
-                    
-                        //Updating the amount in the account data table of the database
-                        Deposit(fAmount);
-                    }
-                } //Conversion failed
-                catch 
+                    Deposit(dAmount);
+
+                    this.Close();
+                }
+                else 
                 {
-                    //Informing the user with a message box and clearing the text box
-                    MessageBox.Show("Invalid input. Please input numbers only inside the text field.");
-                    txtDepositAmount.Text = "";
+                    MessageBox.Show("Please enter a value greater than 0.");
+                    numDepositAmount.Value = 0;
                 }
             }
             else 
@@ -115,13 +138,19 @@ namespace BankingSystem
             }
         }
 
-        private void Deposit(float fValue) 
+        private void Deposit(decimal dValue) 
         {
             //Add the amount the user wants to deposit, to the current Balance of their account
-            fBalance += fValue;
+            dBalance += dValue;
+
+            //double dBalance = Convert.ToDouble(fBalance);
 
             //Updating the column inside the database
-            sqlCommand = new SqlCommand("UPDATE AccountData SET Balance='" + fBalance + "' WHERE Username='" + sUsername + "'", sqlCon);
+            sqlCommand = new SqlCommand("UPDATE AccountData SET Balance= " + dBalance + " WHERE Username='" + sUsername + "'", sqlCon);
+
+            sqlCommand.ExecuteNonQuery();
         }
+
+
     }
 }

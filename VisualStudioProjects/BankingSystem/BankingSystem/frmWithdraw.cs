@@ -28,14 +28,14 @@ namespace BankingSystem
 
         //Local Variables
         string sUsername;
-        float fBalance;
+        decimal dBalance;
 
-        public frmWithdraw(string sUser, float fBal)
+        public frmWithdraw(string sUser, decimal dBal)
         {
             InitializeComponent();
 
             sUsername = sUser;
-            fBalance = fBal;
+            dBalance = dBal;
         }
 
         private void frmWithdraw_OnLoad(object sender, EventArgs e)

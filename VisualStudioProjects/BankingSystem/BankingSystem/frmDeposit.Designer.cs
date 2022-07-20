@@ -38,7 +38,9 @@
             this.txtDepositAmount = new System.Windows.Forms.TextBox();
             this.btnDeposit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.numDepositAmount = new System.Windows.Forms.NumericUpDown();
             this.pnlTopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDepositAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopPanel
@@ -52,6 +54,9 @@
             this.pnlTopPanel.Name = "pnlTopPanel";
             this.pnlTopPanel.Size = new System.Drawing.Size(450, 31);
             this.pnlTopPanel.TabIndex = 2;
+            this.pnlTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTopbar_MouseDown);
+            this.pnlTopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTopbar_MouseMove);
+            this.pnlTopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTopbar_MouseUp);
             // 
             // label1
             // 
@@ -59,7 +64,7 @@
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Banking System";
             // 
@@ -103,7 +108,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(16, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 19);
+            this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Your Current Balance:";
             // 
@@ -112,7 +117,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 19);
+            this.label3.Size = new System.Drawing.Size(180, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "The Amount you want to Deposit:";
             // 
@@ -121,7 +126,7 @@
             this.lblBalance.AutoSize = true;
             this.lblBalance.Location = new System.Drawing.Point(212, 56);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(142, 19);
+            this.lblBalance.Size = new System.Drawing.Size(118, 13);
             this.lblBalance.TabIndex = 5;
             this.lblBalance.Text = "Your Current Balance:";
             // 
@@ -129,7 +134,7 @@
             // 
             this.txtDepositAmount.Location = new System.Drawing.Point(275, 104);
             this.txtDepositAmount.Name = "txtDepositAmount";
-            this.txtDepositAmount.Size = new System.Drawing.Size(134, 26);
+            this.txtDepositAmount.Size = new System.Drawing.Size(134, 22);
             this.txtDepositAmount.TabIndex = 1;
             // 
             // btnDeposit
@@ -152,15 +157,29 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(252, 111);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 19);
+            this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "£";
             // 
+            // numDepositAmount
+            // 
+            this.numDepositAmount.DecimalPlaces = 2;
+            this.numDepositAmount.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            131072});
+            this.numDepositAmount.Location = new System.Drawing.Point(275, 145);
+            this.numDepositAmount.Name = "numDepositAmount";
+            this.numDepositAmount.Size = new System.Drawing.Size(120, 22);
+            this.numDepositAmount.TabIndex = 10;
+            // 
             // frmDeposit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 240);
+            this.Controls.Add(this.numDepositAmount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDeposit);
             this.Controls.Add(this.txtDepositAmount);
@@ -176,6 +195,7 @@
             this.Load += new System.EventHandler(this.frmDeposit_OnLoad);
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlTopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDepositAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +213,6 @@
         private System.Windows.Forms.TextBox txtDepositAmount;
         private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numDepositAmount;
     }
 }
