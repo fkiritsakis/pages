@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BankingSystem
 {
@@ -30,7 +31,8 @@ namespace BankingSystem
 
         private void frmAccountCreation_Load(object sender, EventArgs e)
         {
-            sqlCon = new SqlConnection(frmLogin.CONNECTION_STRING);
+            string CONNECTION_STRING = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            sqlCon = new SqlConnection();
             sqlCon.Open();
             
         }
@@ -83,7 +85,8 @@ namespace BankingSystem
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            sqlCon = new SqlConnection(frmLogin.CONNECTION_STRING);
+            string CONNECTION_STRING = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            sqlCon = new SqlConnection(CONNECTION_STRING);
             sqlCon.Open();
 
             if (txtUsername.Text != String.Empty && txtPassword.Text != String.Empty && txtConfirmPassword.Text != String.Empty && txtFirstName.Text != String.Empty && txtLastName.Text != String.Empty)

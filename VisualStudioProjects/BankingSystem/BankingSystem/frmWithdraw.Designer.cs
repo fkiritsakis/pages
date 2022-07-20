@@ -59,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Banking System";
             // 
@@ -103,7 +103,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(248, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 19);
+            this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "£";
             // 
@@ -120,12 +120,13 @@
             this.btnDeposit.TabIndex = 2;
             this.btnDeposit.Text = "Withdraw";
             this.btnDeposit.UseVisualStyleBackColor = false;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // txtDepositAmount
             // 
             this.txtDepositAmount.Location = new System.Drawing.Point(271, 108);
             this.txtDepositAmount.Name = "txtDepositAmount";
-            this.txtDepositAmount.Size = new System.Drawing.Size(134, 26);
+            this.txtDepositAmount.Size = new System.Drawing.Size(134, 22);
             this.txtDepositAmount.TabIndex = 1;
             // 
             // lblBalance
@@ -133,7 +134,7 @@
             this.lblBalance.AutoSize = true;
             this.lblBalance.Location = new System.Drawing.Point(208, 60);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(142, 19);
+            this.lblBalance.Size = new System.Drawing.Size(118, 13);
             this.lblBalance.TabIndex = 14;
             this.lblBalance.Text = "Your Current Balance:";
             // 
@@ -142,7 +143,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 19);
+            this.label3.Size = new System.Drawing.Size(191, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "The Amount you want to Withdraw:";
             // 
@@ -151,13 +152,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 19);
+            this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Your Current Balance:";
             // 
             // frmWithdraw
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 240);
             this.Controls.Add(this.label4);

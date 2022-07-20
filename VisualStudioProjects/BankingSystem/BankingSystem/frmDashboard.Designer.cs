@@ -65,7 +65,7 @@
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Banking System";
             // 
@@ -150,6 +150,7 @@
             this.btnCheckBalance.Text = "Check Balance";
             this.btnCheckBalance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCheckBalance.UseVisualStyleBackColor = true;
+            this.btnCheckBalance.Click += new System.EventHandler(this.btnCheckBalance_Click);
             // 
             // btnCreateClientAccount
             // 
@@ -236,7 +237,7 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 511);
             this.Controls.Add(this.btnViewEmployeeAccount);

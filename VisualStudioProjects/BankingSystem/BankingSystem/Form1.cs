@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
@@ -25,7 +26,8 @@ namespace BankingSystem
         SqlDataReader sqlDReader;
 
         //Creating a public constant for the connection string
-        public const string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\BankDB.mdf;Integrated Security=True;Connect Timeout=30";
+        //public const string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\BankDB.mdf;Integrated Security=True;Connect Timeout=30";
+        
         public frmLogin()
         {
             InitializeComponent();
@@ -34,6 +36,8 @@ namespace BankingSystem
         //Method to run Upon frmLogin loading
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            string CONNECTION_STRING = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+
             //Loading the Connection String
             sqlCon = new SqlConnection(CONNECTION_STRING);
             sqlCon.Open();

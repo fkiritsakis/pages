@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BankingSystem
 {
@@ -21,8 +22,6 @@ namespace BankingSystem
         //Program Variables
         bool bIsEmployee = false;
         bool   bIsAdmin = false;
-        int    iIsEmployee;
-        int    iIsAdmin;
         string sUsername;
         string sFirstName;
         string sLastName;
@@ -48,32 +47,44 @@ namespace BankingSystem
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            sqlCon = new SqlConnection(frmLogin.CONNECTION_STRING);
+            string CONNECTION_STRING = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            sqlCon = new SqlConnection(CONNECTION_STRING);
             sqlCon.Open();
 
             //Getting the data from the database and setting them to local variables
-            sqlCommand = new SqlCommand("SELECT AccountData.FirstName, AccountData.LastName, AccountData.Balance, Accounts.isEmploy, Accounts.isAdmin FROM AccountData, Accounts WHERE Accounts.Username= '" + sUsername + "'", sqlCon);
+            sqlCommand = new SqlCommand("SELECT FirstName, LastName, Balance FROM AccountData WHERE Username= '" + sUsername + "'", sqlCon);
             sqlDataReader = sqlCommand.ExecuteReader();
             while (sqlDataReader.Read()) 
             {
                 sFirstName = sqlDataReader.GetString(0);
                 sLastName = sqlDataReader.GetString(1);
                 fBalance = sqlDataReader.GetFloat(2);
-                iIsEmployee = sqlDataReader.GetInt32(3);
-                iIsAdmin = sqlDataReader.GetInt32(4);
             }
+            sqlDataReader.Close();
+
+            SqlCommand sqlAccounts1Cmd = new SqlCommand("SELECT isEmploy, isAdmin FROM Accounts WHERE Username='" + sUsername + "'" ,sqlCon);
+            sqlDataReader = sqlAccounts1Cmd.ExecuteReader();
+            while (sqlDataReader.Read()) 
+            {
+                int iIsEmployee = sqlDataReader.GetInt32(0);
+                int iIsAdmin = sqlDataReader.GetInt32(1);
+
+                if (iIsEmployee == 1)
+                {
+                    bIsEmployee = true;
+                }
+
+                if (iIsAdmin == 1)
+                {
+                    bIsAdmin = true;
+                }
+            }
+
+            sqlDataReader.Close();
 
             sqlCon.Close();
 
-            if(iIsAdmin == 1) 
-            {
-                bIsAdmin = true;
-            }
-
-            if(iIsEmployee == 1) 
-            {
-                bIsEmployee = true;
-            }
+            
 
             //Hidding the controls (buttons) before the form is loaded
             //Client sees only the first row of buttons
@@ -144,7 +155,29 @@ namespace BankingSystem
 
         #region General Controls
 
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            //Create and show frmDeposit
+            frmDeposit frmDeposit = new frmDeposit(sUsername, fBalance);
+            frmDeposit.Show();
+        }
 
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            //Create And Show frmWithdraw
+            frmWithdraw frmWithdraw = new frmWithdraw(sUsername, fBalance);
+            frmWithdraw.Show();
+        }
+
+        private void btnCheckBalance_Click(object sender, EventArgs e)
+        {
+            //Show a message box displaying the ballance of the current user
+            MessageBox.Show("Your balance is: £" + fBalance);
+
+            //Create a form that displayes the ballance and add a button that shows
+            //the transactions made by this account
+
+        }
 
         private void btnAccountDetails_Click(object sender, EventArgs e)
         {
@@ -168,15 +201,7 @@ namespace BankingSystem
             //Confirmation with Yes/No should also be present for the Delete option
         }
 
-        private void btnDeposit_Click(object sender, EventArgs e)
-        {
-            frmDeposit frmDeposit = new frmDeposit(sUsername, fBalance);
-        }
-
-        private void btnWithdraw_Click(object sender, EventArgs e)
-        {
-            frmWithdraw frmWithdraw = new frmWithdraw(sUsername, fBalance);
-        }
+        
 
         #endregion
 
@@ -190,6 +215,7 @@ namespace BankingSystem
         {
             //TBD Add Tooltips for all options when mouse hover
         }
+
 
 
 

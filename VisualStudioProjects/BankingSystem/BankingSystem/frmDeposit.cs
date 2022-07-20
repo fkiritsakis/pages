@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BankingSystem
 {
@@ -39,7 +40,8 @@ namespace BankingSystem
 
         private void frmDeposit_OnLoad(object sender, EventArgs e)
         {
-            sqlCon = new SqlConnection(frmLogin.CONNECTION_STRING);
+            string CONNECTION_STRING = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            sqlCon = new SqlConnection(CONNECTION_STRING);
             sqlCon.Open();
         }
 
