@@ -23,19 +23,25 @@ namespace BankingSystem
         //Sql Variables
         SqlConnection sqlCon;
         SqlCommand sqlCommand;
-        SqlDataReader sqlDataReader;
-        SqlDataAdapter sqlDataAdapter;
+        SqlTransaction sqlTransaction;
 
         //Local Variables
         string sUsername;
         decimal dBalance;
+        string sFirstName;
+        string sLastName;
 
-        public frmWithdraw(string sUser, decimal dBal)
+        public frmWithdraw(string sUser, decimal dBal, string sFName, string sLName)
         {
             InitializeComponent();
 
             sUsername = sUser;
             dBalance = dBal;
+            sFirstName = sFName;
+            sLastName = sLName;
+
+
+            lblBalance.Text = "£ " + dBalance.ToString();
         }
 
         private void frmWithdraw_OnLoad(object sender, EventArgs e)
@@ -85,9 +91,74 @@ namespace BankingSystem
 
         #endregion
 
+
         private void btnDeposit_Click(object sender, EventArgs e)
         {
+            //If Text box is not empty
+            if (numWithdrawAmount.Value != 0)
+            {
 
+
+                decimal dAmount = numWithdrawAmount.Value;
+                //debug
+                MessageBox.Show("Amount Entered: " + dAmount);
+
+                if (dBalance - dAmount > 0)
+                {
+                    Withdraw(dAmount);
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("The Amount of money that you want to withdraw is greater than the money available in your Account." +
+                                    "\nPlease enter a valid amount.");
+                    numWithdrawAmount.Value = 0;
+                }
+            }
+            else
+            {
+                //The text field was empty, the user is informed
+                MessageBox.Show("Please type the amount you desire to deposit in the text field.");
+            }
+        }
+
+
+        private void Withdraw(decimal dValue)
+        {
+            //Add the amount the user wants to deposit, to the current Balance of their account
+            dBalance -= dValue;
+
+            try
+            {
+                sqlTransaction = sqlCon.BeginTransaction();
+
+                //Updating the column inside the database
+                sqlCommand = new SqlCommand("UPDATE AccountData SET Balance=" + dBalance + " WHERE Username='" + sUsername + "'", sqlCon);
+                sqlCommand.Transaction = sqlTransaction;
+                sqlCommand.ExecuteNonQuery();
+
+                //TBD Create sql command to insert data into Transactions table
+                //TBD Create a new command and insert data in the Transactions Table
+                SqlCommand sqlInsertTransaction = new SqlCommand("INSERT INTO Transactions (FirstName, LastName, Action, Amount, Username) VALUES ('" + sFirstName + "','" + sLastName + "','Withdraw', " + dValue + " ,'" + sUsername + "')", sqlCon);
+                sqlInsertTransaction.Transaction = sqlTransaction;
+                sqlInsertTransaction.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+            }
+            catch
+            {
+                MessageBox.Show("Commit failed!\nTrying to roll back.");
+
+                try
+                {
+                    sqlTransaction.Rollback();
+                }
+                catch
+                {
+                    MessageBox.Show("Transaction Rollback Failed!");
+                }
+            }
         }
     }
 }

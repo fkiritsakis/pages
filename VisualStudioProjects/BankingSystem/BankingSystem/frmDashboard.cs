@@ -84,7 +84,8 @@ namespace BankingSystem
 
             sqlCon.Close();
 
-            
+            //UI Setup
+            lblName.Text = sFirstName + " " + sLastName;
 
             //Hidding the controls (buttons) before the form is loaded
             //Client sees only the first row of buttons
@@ -157,32 +158,38 @@ namespace BankingSystem
 
         private void btnDeposit_Click(object sender, EventArgs e)
         {
+            UpdateBalance();
+            
             //Create and show frmDeposit
-            frmDeposit frmDeposit = new frmDeposit(sUsername, dBalance);
+            frmDeposit frmDeposit = new frmDeposit(sUsername, dBalance, sFirstName, sLastName);
             frmDeposit.Show();
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
+            UpdateBalance();
+
             //Create And Show frmWithdraw
-            frmWithdraw frmWithdraw = new frmWithdraw(sUsername, dBalance);
+            frmWithdraw frmWithdraw = new frmWithdraw(sUsername, dBalance, sFirstName, sLastName);
             frmWithdraw.Show();
         }
 
         private void btnCheckBalance_Click(object sender, EventArgs e)
         {
-            //Show a message box displaying the ballance of the current user
-            MessageBox.Show("Your balance is: £" + dBalance);
+            UpdateBalance();
 
-            //Create a form that displayes the ballance and add a button that shows
-            //the transactions made by this account
+            //Creating a new check balance form and showing it
+            frmCheckBalance frmCheckBalance = new frmCheckBalance(sUsername, dBalance);
+            frmCheckBalance.Show();
 
         }
 
         private void btnAccountDetails_Click(object sender, EventArgs e)
         {
+            UpdateBalance();
+
             //Show A messagebox with the details of the account that is currently logged in
-            MessageBox.Show("Your Account Details. \n First Name: " + sFirstName + "\n Last Name: " + sLastName + " \n Role: " + sRole + " \n Ballance: £" + dBalance);
+            MessageBox.Show("Your Account Details.\n \n First Name: " + sFirstName + "\n Last Name: " + sLastName + " \n Role: " + sRole + " \n Ballance: £" + dBalance +"\n");
         }
 
         private void btnCreateClientAccount_Click(object sender, EventArgs e)
@@ -202,9 +209,30 @@ namespace BankingSystem
             //And view a list of clients with these credentials and their account information
             //Two buttons should be visible, one to "Save"/"Update" and one to delete an account
             //Confirmation with Yes/No should also be present for the Delete option
+            frmViewAccounts frmViewAccounts = new frmViewAccounts(sUsername, dBalance, 0);
+            frmViewAccounts.Show();
         }
 
-        
+        private void btnCreateEmployeeAccount_Click(object sender, EventArgs e)
+        {
+            //Open Employee Creation form and show it
+            frmEmployeeAccountCreation frmEmployeeAccountCreation = new frmEmployeeAccountCreation();
+            frmEmployeeAccountCreation.Show();
+        }
+
+        private void btnViewEmployeeAccount_Click(object sender, EventArgs e)
+        {
+            frmViewAccounts frmViewAccounts = new frmViewAccounts(sUsername, dBalance, 1);
+            frmViewAccounts.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            //Create a new login form, display it and close the current dashboard
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
+        }
 
         #endregion
 
@@ -222,6 +250,33 @@ namespace BankingSystem
 
 
 
+
+
+
+        #endregion
+
+        #region Methods
+
+        private void UpdateBalance() 
+        {
+            sqlCon.Open();
+            //Get the Balance from the database
+            SqlCommand sqlSelectBalanceCmd = new SqlCommand("SELECT Balance FROM AccountData WHERE Username ='" + sUsername + "'", sqlCon);
+            sqlDataReader = sqlSelectBalanceCmd.ExecuteReader();
+            if (sqlDataReader.Read())
+            {
+                //Use the data reader to set the value of dBalance
+                dBalance = sqlDataReader.GetDecimal(0);
+                sqlDataReader.Close();
+            }
+            else
+            {
+                MessageBox.Show("Unexpected Error Occured When reading the database.");
+                sqlDataReader.Close();
+            }
+
+            sqlCon.Close();
+        }
 
 
         #endregion

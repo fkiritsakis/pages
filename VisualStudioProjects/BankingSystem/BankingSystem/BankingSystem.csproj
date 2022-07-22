@@ -70,11 +70,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewAccount.Designer.cs">
+      <DependentUpon>frmViewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeAccountCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeAccountCreation.Designer.cs">
+      <DependentUpon>frmEmployeeAccountCreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAccountCreation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAccountCreation.Designer.cs">
       <DependentUpon>frmAccountCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckBalance.Designer.cs">
+      <DependentUpon>frmCheckBalance.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
@@ -99,8 +117,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmViewAccount.resx">
+      <DependentUpon>frmViewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeAccountCreation.resx">
+      <DependentUpon>frmEmployeeAccountCreation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAccountCreation.resx">
       <DependentUpon>frmAccountCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckBalance.resx">
+      <DependentUpon>frmCheckBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
@@ -136,10 +163,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BankDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="BankDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>BankDB.mdf</DependentUpon>
     </Content>
     <None Include="Resources\bankAppImage72px.png" />

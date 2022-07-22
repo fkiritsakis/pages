@@ -41,7 +41,6 @@ namespace BankingSystem
             //Loading the Connection String
             sqlCon = new SqlConnection(CONNECTION_STRING);
             sqlCon.Open();
-            MessageBox.Show("Connection to Bank Database Successful and Open!");
         }
 
         #region Top Bar Controls

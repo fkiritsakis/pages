@@ -33,12 +33,13 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnDeposit = new System.Windows.Forms.Button();
-            this.txtDepositAmount = new System.Windows.Forms.TextBox();
+            this.btnWithdraw = new System.Windows.Forms.Button();
             this.lblBalance = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.numWithdrawAmount = new System.Windows.Forms.NumericUpDown();
             this.pnlTopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numWithdrawAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopPanel
@@ -59,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.Size = new System.Drawing.Size(130, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Banking System";
             // 
@@ -103,38 +104,31 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(248, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.Size = new System.Drawing.Size(17, 19);
             this.label4.TabIndex = 15;
             this.label4.Text = "£";
             // 
-            // btnDeposit
+            // btnWithdraw
             // 
-            this.btnDeposit.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDeposit.FlatAppearance.BorderSize = 0;
-            this.btnDeposit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDeposit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeposit.Location = new System.Drawing.Point(212, 184);
-            this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(97, 31);
-            this.btnDeposit.TabIndex = 2;
-            this.btnDeposit.Text = "Withdraw";
-            this.btnDeposit.UseVisualStyleBackColor = false;
-            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
-            // 
-            // txtDepositAmount
-            // 
-            this.txtDepositAmount.Location = new System.Drawing.Point(271, 108);
-            this.txtDepositAmount.Name = "txtDepositAmount";
-            this.txtDepositAmount.Size = new System.Drawing.Size(134, 22);
-            this.txtDepositAmount.TabIndex = 1;
+            this.btnWithdraw.BackColor = System.Drawing.SystemColors.Control;
+            this.btnWithdraw.FlatAppearance.BorderSize = 0;
+            this.btnWithdraw.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnWithdraw.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWithdraw.Location = new System.Drawing.Point(212, 184);
+            this.btnWithdraw.Name = "btnWithdraw";
+            this.btnWithdraw.Size = new System.Drawing.Size(97, 31);
+            this.btnWithdraw.TabIndex = 2;
+            this.btnWithdraw.Text = "Withdraw";
+            this.btnWithdraw.UseVisualStyleBackColor = false;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.Location = new System.Drawing.Point(208, 60);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(118, 13);
+            this.lblBalance.Size = new System.Drawing.Size(142, 19);
             this.lblBalance.TabIndex = 14;
             this.lblBalance.Text = "Your Current Balance:";
             // 
@@ -143,7 +137,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 13);
+            this.label3.Size = new System.Drawing.Size(229, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "The Amount you want to Withdraw:";
             // 
@@ -152,18 +146,37 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.Size = new System.Drawing.Size(142, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "Your Current Balance:";
             // 
+            // numWithdrawAmount
+            // 
+            this.numWithdrawAmount.DecimalPlaces = 2;
+            this.numWithdrawAmount.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            131072});
+            this.numWithdrawAmount.Location = new System.Drawing.Point(271, 110);
+            this.numWithdrawAmount.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.numWithdrawAmount.Name = "numWithdrawAmount";
+            this.numWithdrawAmount.Size = new System.Drawing.Size(99, 26);
+            this.numWithdrawAmount.TabIndex = 16;
+            this.numWithdrawAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmWithdraw
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 240);
+            this.Controls.Add(this.numWithdrawAmount);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnDeposit);
-            this.Controls.Add(this.txtDepositAmount);
+            this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -176,6 +189,7 @@
             this.Load += new System.EventHandler(this.frmWithdraw_OnLoad);
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlTopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numWithdrawAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,10 +202,10 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnDeposit;
-        private System.Windows.Forms.TextBox txtDepositAmount;
+        private System.Windows.Forms.Button btnWithdraw;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numWithdrawAmount;
     }
 }

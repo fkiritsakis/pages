@@ -42,3 +42,8 @@ C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSyste
 C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmAccountCreation.resources
 C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmWithdraw.resources
 C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmDeposit.resources
+C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmWithdraw.resources
+C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmDeposit.resources
+C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmCheckBalance.resources
+C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmEmployeeAccountCreation.resources
+C:\Users\fotis\OneDrive\Documents\GitHub\pages\VisualStudioProjects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.frmViewAccounts.resources

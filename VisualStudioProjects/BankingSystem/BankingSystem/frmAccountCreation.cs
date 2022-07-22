@@ -23,6 +23,7 @@ namespace BankingSystem
         //Database Variables
         SqlConnection sqlCon;
         SqlDataReader sqlDReader;
+        SqlTransaction sqlTransaction;
 
         public frmAccountCreation()
         {
@@ -32,7 +33,7 @@ namespace BankingSystem
         private void frmAccountCreation_Load(object sender, EventArgs e)
         {
             string CONNECTION_STRING = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-            sqlCon = new SqlConnection();
+            sqlCon = new SqlConnection(CONNECTION_STRING);
             sqlCon.Open();
             
         }
@@ -110,14 +111,23 @@ namespace BankingSystem
                         sqlDReader.Close();
                         //Inserting the data into the Accounts Table after making sure that they are unique
                         SqlCommand sqlAccountsCmd = new SqlCommand("INSERT INTO Accounts (Username, Password, isEmploy, isAdmin) VALUES ('" + txtUsername.Text + "','" + txtPassword.Text + "', '0', '0')", sqlCon);
-                        SqlCommand sqlAccountDataCmd = new SqlCommand("INSERT INTO AccountData (Username, FirstName, LastName, Balance) VALUES ( '"+ txtUsername.Text +"' ,'" + txtFirstName.Text + "','" + txtLastName.Text + "','0')", sqlCon);
+                        SqlCommand sqlAccountDataCmd = new SqlCommand("INSERT INTO AccountData (Username, FirstName, LastName, Balance, isEmployee) VALUES ( '" + txtUsername.Text + "' ,'" + txtFirstName.Text + "','" + txtLastName.Text + "','0', '0')", sqlCon);
                         sqlAccountsCmd.ExecuteNonQuery();
                         sqlAccountDataCmd.ExecuteNonQuery();
-
+                        
                         //Informing the user that the account has been created
                         MessageBox.Show("Your account has been created, please login now.");
+
+                        sqlCon.Close();
+                        this.Close();
                     }
 
+                }
+                else 
+                {
+                    MessageBox.Show("The two passwords must be the same!");
+                    txtPassword.Text = "";
+                    txtConfirmPassword.Text = "";
                 }
             }
             else

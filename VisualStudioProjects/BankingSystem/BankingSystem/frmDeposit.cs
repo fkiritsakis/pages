@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Globalization;
 
 namespace BankingSystem
 {
@@ -24,19 +23,22 @@ namespace BankingSystem
         //Sql Variables
         SqlConnection sqlCon;
         SqlCommand sqlCommand;
-        SqlDataReader sqlDataReader;
-        SqlDataAdapter sqlDataAdapter;
+        SqlTransaction sqlTransaction;
 
         //Local Variable
         string sUsername;
         decimal dBalance;
+        string sFirstName;
+        string sLastName;
 
-        public frmDeposit(string sUser, decimal dBal)
+        public frmDeposit(string sUser, decimal dBal, string sFName, string sLName)
         {
             InitializeComponent();
 
             sUsername = sUser;
             dBalance = dBal;
+            sFirstName = sFName;
+            sLastName = sLName;
 
             lblBalance.Text = "£ " + dBalance.ToString();
         }
@@ -118,6 +120,8 @@ namespace BankingSystem
                 
 
                 decimal dAmount = numDepositAmount.Value;
+                //debug
+                MessageBox.Show("Amount Entered: " + dAmount);
 
                 if(dAmount > 0) 
                 {
@@ -142,13 +146,38 @@ namespace BankingSystem
         {
             //Add the amount the user wants to deposit, to the current Balance of their account
             dBalance += dValue;
+            
+            
 
-            //double dBalance = Convert.ToDouble(fBalance);
+            try 
+            {
+                sqlTransaction = sqlCon.BeginTransaction();
 
-            //Updating the column inside the database
-            sqlCommand = new SqlCommand("UPDATE AccountData SET Balance= " + dBalance + " WHERE Username='" + sUsername + "'", sqlCon);
+                //Updating the column inside the database
+                sqlCommand = new SqlCommand("UPDATE AccountData SET Balance=" + dBalance + " WHERE Username='" + sUsername + "'", sqlCon);
+                sqlCommand.Transaction = sqlTransaction;
+                sqlCommand.ExecuteNonQuery();
 
-            sqlCommand.ExecuteNonQuery();
+                //TBD Create a new command and insert data in the Transactions Table
+                SqlCommand sqlInsertTransaction = new SqlCommand("INSERT INTO Transactions (FirstName, LastName, Action, Amount, Username) VALUES ('" + sFirstName + "','" + sLastName + "','Deposit', "+ dValue +" ,'" + sUsername + "')", sqlCon);
+                sqlInsertTransaction.Transaction = sqlTransaction;
+                sqlInsertTransaction.ExecuteNonQuery();
+
+                sqlTransaction.Commit();
+            }
+            catch 
+            {
+                MessageBox.Show("Commit failed!\nTrying to roll back.");
+
+                try 
+                {
+                    sqlTransaction.Rollback();
+                }
+                catch 
+                {
+                    MessageBox.Show("Transaction Rollback Failed!");
+                }
+            }
         }
 
 
