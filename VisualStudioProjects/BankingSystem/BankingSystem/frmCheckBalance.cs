@@ -72,14 +72,13 @@ namespace BankingSystem
 
             //Write the data to a file
             string sPathToEXE = Path.GetDirectoryName(Application.ExecutablePath);
-            string sFileName = String.Format("Transaction History of {0} {1} up to {2:yyyy-MM-dd}", sFirstName, sLastName, DateTime.Now);
+            string sFileName = String.Format("Transaction History of {0} {1} up to {2:yyyy-MM-dd}.txt", sFirstName, sLastName, DateTime.Now);
 
             string sFilePath = Path.Combine(sPathToEXE, sFileName);
 
             //Checking if the file exists
             if (!File.Exists(sFilePath))
             {
-
                 //Get the transactions from the transaction table
                 SqlCommand sqlSelectTransCmd = new SqlCommand("SELECT id, Action, Amount FROM Transactions WHERE Username ='" + sUsername + "'", sqlCon);
                 //Put the following code in a while sqlDataReader.Read 

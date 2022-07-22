@@ -146,38 +146,24 @@ namespace BankingSystem
         {
             //Add the amount the user wants to deposit, to the current Balance of their account
             dBalance += dValue;
-            
-            
-
-            try 
+           
+            //Updating the Balance
+            SqlCommand sqlUpdateBalanceCommand = new SqlCommand("UPDATE AccountData SET Balance= @Value WHERE Username='" + sUsername + "'", sqlCon);
+            sqlUpdateBalanceCommand.Parameters.Add(new SqlParameter("@Value", SqlDbType.Decimal)
             {
-                sqlTransaction = sqlCon.BeginTransaction();
+                Precision = 10,
+                Scale = 2
+            }).Value = dBalance;
+            sqlUpdateBalanceCommand.ExecuteNonQuery();
 
-                //Updating the column inside the database
-                sqlCommand = new SqlCommand("UPDATE AccountData SET Balance=" + dBalance + " WHERE Username='" + sUsername + "'", sqlCon);
-                sqlCommand.Transaction = sqlTransaction;
-                sqlCommand.ExecuteNonQuery();
-
-                //TBD Create a new command and insert data in the Transactions Table
-                SqlCommand sqlInsertTransaction = new SqlCommand("INSERT INTO Transactions (FirstName, LastName, Action, Amount, Username) VALUES ('" + sFirstName + "','" + sLastName + "','Deposit', "+ dValue +" ,'" + sUsername + "')", sqlCon);
-                sqlInsertTransaction.Transaction = sqlTransaction;
-                sqlInsertTransaction.ExecuteNonQuery();
-
-                sqlTransaction.Commit();
-            }
-            catch 
+            //Create a new command and insert data in the Transactions Table
+            SqlCommand sqlInsertTransaction = new SqlCommand("INSERT INTO Transactions (FirstName, LastName, Action, Amount, Username) VALUES ('" + sFirstName + "','" + sLastName + "','Deposit', @Amount ,'" + sUsername + "')", sqlCon);
+            sqlInsertTransaction.Parameters.Add(new SqlParameter("@Amount", SqlDbType.Decimal)
             {
-                MessageBox.Show("Commit failed!\nTrying to roll back.");
-
-                try 
-                {
-                    sqlTransaction.Rollback();
-                }
-                catch 
-                {
-                    MessageBox.Show("Transaction Rollback Failed!");
-                }
-            }
+                Precision = 10,
+                Scale = 2
+            }).Value = dValue;
+            sqlInsertTransaction.ExecuteNonQuery();
         }
 
 
