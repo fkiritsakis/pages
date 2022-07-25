@@ -1,0 +1,12 @@
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\bin\Debug\OrizonApp.exe.config
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\bin\Debug\OrizonApp.exe
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\bin\Debug\OrizonApp.pdb
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.csproj.AssemblyReference.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.frmLogin.resources
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.Properties.Resources.resources
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.csproj.GenerateResource.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.csproj.CoreCompileInputs.cache
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.exe
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.pdb
+C:\Users\Service-2\Documents\GitHub\pages\VisualStudioProjects\OrizonApp\OrizonApp\obj\Debug\OrizonApp.FrmDashboard.resources
